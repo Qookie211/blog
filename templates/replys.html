@@ -1,0 +1,20 @@
+{% for reply in replys %}
+    <hr>
+    <div>
+        <div class="userinfo" >
+            <div class="pull-left">
+                <a href="{{reply.userInfoURL}}"><img src="{{reply.portrait}}" alt="用户头像"></a>
+            </div >
+            <div class="pull-left">
+                <a href="{{reply.userInfoURL}}"><div class="smalltitle">{{reply.reply_title}}</div></a>
+                <div>
+                    <span class="userName">{{ reply.userName }}</span>
+                    <span class="releaseDate">发布于：{{ reply.reply_date }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="discuss_content clearfloat" >
+            {% autoescape off %}{{ reply.reply_content }}{% endautoescape %}
+        </div>
+    </div>
+{% endfor %}

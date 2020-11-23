@@ -1,0 +1,294 @@
+.subjct{
+	font-size: 18px;
+}
+.activeSubject{
+	background-color: #0482BA;
+	border: 2px;
+	border-style: inset;
+	box-sizing: border-box;
+}
+.navbar{
+	background-color: #0593D3;
+}
+.navbar-brand, .subjct a {
+    color: white!important;
+}
+.navbar-brand:hover,.subjct a:hover{
+    color: black!important;
+}
+.navbar-brand{
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.nav-center{
+	margin-left: 50px;
+}
+.navbar-right{
+	font-size: 16px;
+}
+.border{
+	border: 1px red solid;
+	box-sizing: border-box;
+}
+
+.chapter1{
+	font-size: 17px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	margin-left: 10px;
+	font-weight: 700;
+}
+
+
+.chapter2{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	margin-left: 30px;
+}
+.chapter3{
+	margin-bottom: 7px;
+	margin-top: 7px;
+	margin-left: 50px;
+}
+.chapter4{
+	margin-bottom: 7px;
+	margin-top: 7px;
+	margin-left: 70px;
+}
+.chapter{
+	display: none;
+}
+.shrink{
+	font-size: 14px;
+	cursor: pointer;
+	position: relative;
+	margin-left: -9px;
+}
+.shrink + a {
+	font-size: 17px;
+	font-weight: 700;
+}
+#views{
+	font-size: 18px;
+	margin-bottom: 20px;
+	margin-left: 30px;
+	margin-top: 30px;
+	font-weight: 600;
+	color: gray;
+}
+#mainContent{
+	border-left: coral 1px solid;
+}
+#contentFoot{
+	margin: 30px auto;
+
+	width: 99.9%;
+	padding: 10px 50px;
+}
+#contentFoot a{
+	font-size: 17px;
+	padding: 5px 8px;
+	border-radius: 2px;
+}
+#contentFoot hr{
+
+	border-top:2px solid gainsboro;
+}
+a,a:hover,a:visited,a:active{
+	text-decoration: none;
+}
+
+#activeChapter a{
+	display: inline-block;
+	background-color: #00A8E6;
+	border-radius: 2px;
+	padding: 2px 3px;
+}
+#activeChapter a{
+	color: white;
+}
+#comment div h2{
+	margin-left: 35px;
+	font-weight: 700;
+	letter-spacing: 6px;
+
+}
+#hrOne{
+	margin-top: 20px;
+	width: 95%;
+	border:none;
+	border-top:3px solid darkolivegreen;
+}
+#conmentContent{
+	margin-left: 20px;
+}
+#conmentContent div{
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 6px;
+}
+
+#conmentContent input{
+	width: 85%;
+	margin-top: 5px;
+	font-weight:600;
+	font-style: italic;
+	font-size: 16px;
+
+
+}
+
+#conmentContent textarea{
+	margin-top: 2px;
+	width: 85%;
+	height: 100px;
+
+}
+#conmentContent button{
+	margin-top: 10px;
+	width: 80px;
+	letter-spacing: 6px;
+	font-size: 16px;
+}
+
+.cancel{
+	margin-left: 57%;
+	margin-right: 20px;
+}
+.cancelReply{
+	margin-left: 57%;
+	margin-right: 20px;
+}
+
+.replyTextareToPush{
+	margin-top: 2px;
+	width: 85%;
+	height: 100px;
+}
+
+
+.replyComment div{
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 6px;
+}
+
+.replyComment input{
+	width: 85%;
+	margin-top: 5px;
+	font-weight:600;
+	font-style: italic;
+	font-size: 16px;
+}
+
+
+.userinfo img{
+	width: 80px;
+	height:80px;
+	border-radius: 100px;
+}
+.userinfo .title{
+	margin-top:8px ;
+	font-size: 20px;
+	margin-left: 15px;
+	margin-bottom: 3px;
+	letter-spacing: 3px;
+	font-weight: 700;
+	color: #0593D3;
+}
+.userName,.releaseDate{
+	margin-left: 17px;
+	color: gray;
+}
+.clearfloat{
+	clear: both;
+}
+.discuss_content {
+	margin: 30px 0px 20px 80px;
+}
+.discuss_content *{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.hrs{
+	width: 95%;
+	border: none;
+    border-top: 2px solid #69a2dc;
+    }
+
+.allComment{
+	margin-top: 20px;
+	margin-left: 90px;
+	margin-right: 20px;
+	margin-bottom:12px ;
+}
+.reply{
+	margin-top: 20px;
+	margin-bottom:12px ;
+}
+
+.smalltitle{
+	margin-top:13px ;
+	font-size: 17px;
+	margin-left: 13px;
+	margin-bottom: 3px;
+	letter-spacing: 3px;
+	font-weight: 700;
+	color: #0593D3;
+}
+#reminder2 {
+	margin-left: 10px;
+	padding: 5px 10px;
+	color: grey;
+}
+
+.reminder{
+	margin-bottom: 40px;
+}
+.reminder li{
+	display: inline-block;
+	/*width: 30px;*/
+	list-style:none
+}
+.reminder a{
+	display: inline-block;
+	width: 90px;
+	height: 50px;
+	position: relative;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.reminder a span{
+	/*position: absolute;*/
+	display: block;
+	margin: 5px 10px;
+	text-align: center;
+	font-size: 17px;
+}
+
+#showALLorHideNav div{
+	margin: 10px 8px;
+	padding: 3px;
+	border-radius: 2px;
+	background-color: yellowgreen;
+}
+#showALLorHideNav div:hover{
+	background-color: grey ;
+	color: red;
+}
+#smallGlyphicon{
+	padding: 4px;
+}
+
+ @media screen and (max-width: 768px){
+        #chapterNav{
+            width:100%;
+            height: 100%;
+            background-color: darkblue;
+        }
+	 	#showOrHide{
+			display: none;
+		}
+    }

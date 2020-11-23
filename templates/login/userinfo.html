@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息页面</title>
+    <link rel="stylesheet" media="screen" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css'%}" />
+    <link rel="stylesheet" media="screen" href="{% static 'css/login/userinfo.css'%}" />
+</head>
+<body>
+	<nav class="navbar navbar-default"><div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">王斌印的博客</a>
+		</div>
+	{% if self %}
+		<div>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="">
+				   <a href="#" class="label label-success">修改个人信息</a>
+				</li>
+				<li class="">
+				   <a href="http://127.0.0.1:8000/" class="label label-info">返回首页</a>
+				</li>
+				<li class="">
+					<a class="label label-danger" id="logout">退出登陆</a>
+				</li>
+				<li class="">
+					<div class="pull-right">
+						<div style="margin-top: 5px">当前登陆用户为:</div>
+						<div style="color:rebeccapurple;font-weight: 700;margin-left: 10px">{{user.userName}}</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	{% else %}
+		<div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="{% url 'register:toregister' %}">
+					<span class="glyphicon glyphicon-user"></span> 注册
+				</a></li>
+				<li><a href="{% url 'login:index' %}">
+					<span class="glyphicon glyphicon-log-in"></span> 登录
+				</a></li>
+				<li class="">
+				   <a href="http://127.0.0.1:8000/" class="label label-info">返回首页</a>
+				</li>
+			</ul>
+		</div>
+	{% endif %}
+	</div></nav>
+	<div id="main">
+		<div  align="center" class="head">
+			<img  src="{{userportrait}}"/>
+		</div>
+		<div align="center">
+			<div><span>昵称：</span><span style="color:greenyellow;font-size: 16px">{{user.nickName}}</span></div>
+			<br/>
+			<div>{{user.details}}</div>
+		</div>
+	</div>
+	<div id="comments">
+		<div align="center"><img src="{%static '/img/userinfo/bj.png' %}"/></div>
+		{%if newDiscusses%}
+		<div><h2>所有的评论：</h2></div>
+		<div class="dicuss">
+			{% for dicuss in newDiscusses %}
+			<div class="userinfo" >
+				<div class="title">{{dicuss.discuss_title}}</div>
+				<div class="pull-left">
+					<span class="releaseDate">发布于：{{ dicuss.discuss_date }}</span>
+				</div>
+				<div class="pull-left"><button class="btn btn-info">
+					<a href="{{dicuss.url}}">文章链接</a>
+				</button></div>
+			</div>
+			<div class="discuss_content clearfloat" >
+				{% autoescape off %}{{ dicuss.discuss_content }}{% endautoescape %}
+			</div>
+			<hr/>
+			{% endfor %}
+		</div>
+		{% if replys %} <hr class="hrs"> {% endif %}
+		{% else %}
+			<h2>暂无留言</h2>
+		{%endif%}
+
+
+		{%if newReplys %}
+		<h2>所有的回复：</h2>
+		<div class="dicuss">
+			{%for reply in newReplys %}
+			<div class="userinfo" >
+				<span>针对</span><span class="smalltitle">{{reply.reply_chapter}} </span> <span> 的回复&nbsp;&nbsp;:</span>
+				<div class="title">{{reply.reply_title}}</div>
+				<div class="pull-left">
+					<span class="releaseDate">回复于：{{ reply.reply_date }}</span>
+				</div>
+				<div class="pull-left"><button class="btn btn-info">
+					<a href="{{reply.url}}">文章链接</a>
+				</button></div>
+			</div>
+			<div class="discuss_content clearfloat" >
+				{% autoescape off %}{{ reply.reply_content }}{% endautoescape %}
+			</div>
+			<hr/>
+			{% endfor %}
+		</div>
+		{%else%}
+		<h2>暂无回复内容</h2>
+		{%endif%}
+	</div>
+	<script src="{%static 'js/jquery-2.2.4.min.js'%}" type="text/javascript"></script>
+	<script src="{%static 'js/login/userinfo.js'%}" type="text/javascript"></script>
+</body>
+</html>
